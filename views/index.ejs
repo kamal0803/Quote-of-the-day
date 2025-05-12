@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quote of the Day</title>
+  <link rel="stylesheet" href="/styles/main.css">
+</head>
+
+<body id="app">
+  
+  <div class="container">
+
+    <form action="/get_quote" method="post">
+      <h1>
+        Quote of the Day
+      </h1>
+  
+      <p>
+      <% if (locals.currentQuote) { %>
+          <%= currentQuote.quote %> - <b><%= currentQuote.author %></b>
+          <% } %>
+      </p>
+      <button type="submit">Get Quote</button>
+    </form>
+
+    <form action="/submit_quote" method="post">
+      <button type="submit">Post Quote</button>
+    </form>
+    
+
+
+  </div>
+
+</body>
+
+</html>
